@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUERELLE - Tapicería y Decoración de Interiores | Calidad y Elegancia</title>
+    <title>TAPICERÍA DE MÁXIMO NIVEL - MUEBLES RQ | La Loma de Bolívar, Cúcuta</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #C5A572;
-            --beige: #F5F1E8;
-            --brown: #3E2723;
-            --light-brown: #8D6E63;
-            --cream: #FFFBF0;
-            --dark: #1A120B;
+            --primary: #8B4513; /* Marrón madera */
+            --secondary: #D2691E; /* Chocolate */
+            --accent: #DEB887; /* Madera clara */
+            --light: #FAF3E0; /* Beige claro */
+            --dark: #2C1810; /* Marrón oscuro */
+            --gold: #C5A572; /* Dorado elegante */
         }
         
         * {
@@ -25,8 +25,9 @@
         body {
             font-family: 'Raleway', sans-serif;
             line-height: 1.7;
-            color: var(--brown);
-            background-color: var(--cream);
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
         }
         
         h1, h2, h3, h4, h5 {
@@ -44,7 +45,7 @@
         
         /* Header Elegante */
         header {
-            background-color: rgba(26, 18, 11, 0.95);
+            background-color: var(--dark);
             color: white;
             padding: 1.2rem 0;
             position: fixed;
@@ -52,7 +53,7 @@
             width: 100%;
             z-index: 1000;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(197, 165, 114, 0.3);
+            border-bottom: 2px solid var(--accent);
         }
         
         .header-content {
@@ -63,31 +64,31 @@
         
         .logo {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             text-decoration: none;
         }
         
-        .logo h1 {
+        .logo-main {
             font-size: 2.2rem;
-            color: var(--gold);
-            margin-bottom: 0;
-            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         
         .logo-subtitle {
             font-size: 0.9rem;
-            color: var(--beige);
-            margin-left: 10px;
+            color: var(--gold);
             font-style: italic;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            margin-top: 3px;
         }
         
-        /* Menú Hamburguesa Mejorado */
+        /* Menú Hamburguesa */
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            color: var(--gold);
+            color: var(--accent);
             font-size: 1.8rem;
             cursor: pointer;
             padding: 5px;
@@ -108,7 +109,7 @@
         }
         
         .nav-links a {
-            color: var(--beige);
+            color: white;
             text-decoration: none;
             font-weight: 500;
             font-size: 1.05rem;
@@ -120,7 +121,7 @@
         }
         
         .nav-links a:hover {
-            color: var(--gold);
+            color: var(--accent);
         }
         
         .nav-links a:after {
@@ -130,7 +131,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--gold);
+            background-color: var(--accent);
             transition: width 0.3s;
         }
         
@@ -138,9 +139,9 @@
             width: 100%;
         }
         
-        /* Hero Section de Lujo */
+        /* Hero Section Impactante */
         .hero {
-            background: linear-gradient(rgba(26, 18, 11, 0.85), rgba(26, 18, 11, 0.9)), 
+            background: linear-gradient(rgba(44, 24, 16, 0.85), rgba(44, 24, 16, 0.9)), 
                         url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
@@ -155,35 +156,36 @@
             margin: 0 auto;
         }
         
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--gold);
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
             letter-spacing: 1px;
         }
         
         .hero-subtitle {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
-            color: var(--beige);
+            color: white;
             font-weight: 300;
         }
         
         .divider {
             width: 100px;
-            height: 2px;
-            background-color: var(--gold);
+            height: 3px;
+            background-color: var(--accent);
             margin: 2rem auto;
         }
         
         .contact-highlight {
-            background-color: rgba(197, 165, 114, 0.15);
-            border-left: 4px solid var(--gold);
+            background-color: rgba(222, 184, 135, 0.15);
+            border-left: 4px solid var(--accent);
             padding: 2rem;
             margin: 3rem 0;
             text-align: left;
             border-radius: 0 10px 10px 0;
+            border-right: 1px solid rgba(222, 184, 135, 0.3);
         }
         
         .contact-highlight p {
@@ -192,13 +194,13 @@
         }
         
         .contact-highlight i {
-            color: var(--gold);
+            color: var(--accent);
             margin-right: 15px;
             width: 25px;
             text-align: center;
         }
         
-        /* Botones Elegantes */
+        /* Botones */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -217,30 +219,30 @@
             letter-spacing: 1px;
         }
         
-        .btn-gold {
-            background-color: var(--gold);
-            color: var(--dark);
-            border: 2px solid var(--gold);
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
         }
         
-        .btn-gold:hover {
+        .btn-primary:hover {
             background-color: transparent;
-            color: var(--gold);
+            color: var(--primary);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(197, 165, 114, 0.3);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
         }
         
-        .btn-outline {
-            background-color: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--gold);
+        .btn-accent {
+            background-color: var(--accent);
             color: var(--dark);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: transparent;
+            color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(197, 165, 114, 0.3);
+            box-shadow: 0 10px 25px rgba(222, 184, 135, 0.3);
         }
         
         .btn-whatsapp {
@@ -270,7 +272,7 @@
             position: relative;
             display: inline-block;
             padding-bottom: 20px;
-            color: var(--brown);
+            color: var(--dark);
         }
         
         .section-title h2:after {
@@ -281,55 +283,49 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background-color: var(--gold);
+            background-color: var(--primary);
         }
         
         .section-title p {
             font-size: 1.3rem;
-            color: var(--light-brown);
+            color: var(--secondary);
             max-width: 700px;
             margin: 1.5rem auto 0;
             font-style: italic;
         }
         
-        /* Valores QUERELLE */
-        .values-grid {
+        /* Misión, Visión, Valores */
+        .mv-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
         }
         
-        .value-card {
+        .mv-card {
             background-color: white;
             padding: 3rem 2.5rem;
             text-align: center;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
             transition: transform 0.4s ease;
-            border-top: 5px solid var(--gold);
+            border-top: 5px solid var(--primary);
         }
         
-        .value-card:hover {
+        .mv-card:hover {
             transform: translateY(-15px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
         }
         
-        .value-icon {
+        .mv-icon {
             font-size: 3.5rem;
-            color: var(--gold);
+            color: var(--primary);
             margin-bottom: 2rem;
         }
         
-        .value-card h3 {
-            color: var(--brown);
+        .mv-card h3 {
+            color: var(--dark);
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             letter-spacing: 1px;
-        }
-        
-        .value-card p {
-            color: var(--light-brown);
-            font-size: 1.1rem;
-            line-height: 1.8;
         }
         
         /* Servicios */
@@ -354,7 +350,7 @@
         
         .service-img {
             height: 250px;
-            background-color: var(--beige);
+            background-color: var(--light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -363,7 +359,7 @@
         
         .service-img i {
             font-size: 6rem;
-            color: var(--gold);
+            color: var(--primary);
             opacity: 0.8;
         }
         
@@ -373,13 +369,13 @@
         }
         
         .service-content h3 {
-            color: var(--brown);
+            color: var(--dark);
             font-size: 1.6rem;
             margin-bottom: 1.2rem;
         }
         
         .service-price {
-            color: var(--gold);
+            color: var(--primary);
             font-size: 1.8rem;
             font-weight: 700;
             margin-top: 1.5rem;
@@ -393,11 +389,11 @@
         }
         
         .contact-section .section-title h2 {
-            color: var(--gold);
+            color: var(--accent);
         }
         
         .contact-section .section-title p {
-            color: var(--beige);
+            color: var(--gold);
         }
         
         .contact-container {
@@ -408,7 +404,7 @@
         }
         
         .contact-info h3 {
-            color: var(--gold);
+            color: var(--accent);
             font-size: 2rem;
             margin-bottom: 2rem;
         }
@@ -418,7 +414,7 @@
             padding: 2.5rem;
             border-radius: 5px;
             margin-bottom: 2rem;
-            border: 1px solid rgba(197, 165, 114, 0.2);
+            border: 1px solid rgba(222, 184, 135, 0.2);
         }
         
         .contact-details p {
@@ -429,43 +425,18 @@
         }
         
         .contact-details i {
-            color: var(--gold);
+            color: var(--accent);
             margin-right: 15px;
             width: 25px;
             font-size: 1.2rem;
         }
         
-        .contact-map {
-            height: 400px;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(197, 165, 114, 0.2);
-        }
-        
-        .map-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            padding: 2rem;
-        }
-        
-        .map-placeholder i {
-            font-size: 4.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Footer Elegante */
+        /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
             padding: 5rem 0 3rem;
-            border-top: 1px solid rgba(197, 165, 114, 0.3);
+            border-top: 1px solid rgba(222, 184, 135, 0.3);
         }
         
         .footer-content {
@@ -476,10 +447,14 @@
         }
         
         .footer-logo h3 {
-            color: var(--gold);
+            color: var(--accent);
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        
+        .footer-logo span {
+            color: var(--gold);
         }
         
         .footer-logo p {
@@ -489,7 +464,7 @@
         }
         
         .footer-links h4, .footer-contact h4 {
-            color: var(--gold);
+            color: var(--accent);
             margin-bottom: 1.8rem;
             font-size: 1.3rem;
             letter-spacing: 1px;
@@ -514,7 +489,7 @@
         }
         
         .footer-links ul li a:hover {
-            color: var(--gold);
+            color: var(--accent);
         }
         
         .footer-contact p {
@@ -527,7 +502,7 @@
         }
         
         .footer-contact i {
-            color: var(--gold);
+            color: var(--accent);
             width: 20px;
         }
         
@@ -543,19 +518,19 @@
             justify-content: center;
             width: 45px;
             height: 45px;
-            background-color: rgba(197, 165, 114, 0.1);
-            color: var(--gold);
+            background-color: rgba(222, 184, 135, 0.1);
+            color: var(--accent);
             border-radius: 50%;
             text-decoration: none;
             transition: all 0.3s;
-            border: 1px solid rgba(197, 165, 114, 0.3);
+            border: 1px solid rgba(222, 184, 135, 0.3);
         }
         
         .social-icons a:hover {
-            background-color: var(--gold);
+            background-color: var(--accent);
             color: var(--dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(197, 165, 114, 0.3);
+            box-shadow: 0 10px 20px rgba(222, 184, 135, 0.3);
         }
         
         .copyright {
@@ -569,15 +544,15 @@
         
         /* Responsive */
         @media (max-width: 992px) {
-            .hero h2 {
-                font-size: 3rem;
+            .hero h1 {
+                font-size: 3.2rem;
             }
             
             .hero-subtitle {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
             
-            .values-grid {
+            .mv-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -599,7 +574,7 @@
                 padding: 6rem 2rem 2rem;
                 transition: right 0.4s ease;
                 z-index: 1000;
-                border-left: 1px solid rgba(197, 165, 114, 0.3);
+                border-left: 1px solid var(--accent);
             }
             
             .main-nav.active {
@@ -620,30 +595,26 @@
                 margin-top: 70px;
             }
             
-            .hero h2 {
-                font-size: 2.5rem;
+            .hero h1 {
+                font-size: 2.8rem;
             }
             
             .hero-subtitle {
-                font-size: 1.4rem;
-            }
-            
-            .contact-highlight {
-                padding: 1.5rem;
+                font-size: 1.6rem;
             }
             
             .section {
                 padding: 4rem 0;
             }
-            
-            .value-card {
-                padding: 2.5rem 2rem;
-            }
         }
         
         @media (max-width: 576px) {
-            .hero h2 {
+            .hero h1 {
                 font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
             }
             
             .section-title h2 {
@@ -659,21 +630,16 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Header Elegante -->
+    <!-- Header -->
     <header>
         <div class="container header-content">
             <a href="#" class="logo">
-                <h1>QUERELLE</h1>
-                <div class="logo-subtitle">Tapicería & Decoración</div>
+                <div class="logo-main">MUEBLES RQ</div>
+                <div class="logo-subtitle">TAPICERÍA DE MÁXIMO NIVEL</div>
             </a>
             
             <button class="menu-toggle" id="menuToggle">
@@ -683,6 +649,8 @@
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-links">
                     <li><a href="#home">Inicio</a></li>
+                    <li><a href="#mission">Misión</a></li>
+                    <li><a href="#vision">Visión</a></li>
                     <li><a href="#values">Valores</a></li>
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#contact">Contacto</a></li>
@@ -691,84 +659,97 @@
         </div>
     </header>
 
-    <!-- Hero Section Elegante -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h2>QUERELLE</h2>
-            <div class="hero-subtitle">Tapicería y Decoración de Interiores</div>
+            <h1>TAPICERÍA DE MÁXIMO NIVEL</h1>
+            <div class="hero-subtitle">MUEBLES RQ - La Loma de Bolívar, Cúcuta</div>
             <div class="divider"></div>
-            <p style="font-size: 1.3rem; color: var(--beige); margin-bottom: 2rem;">
-                Elegancia atemporal en cada detalle. Transformamos espacios con artesanía experta y materiales de primera calidad.
+            <p style="font-size: 1.3rem; color: #f5f5f5; margin-bottom: 2rem;">
+                Transformamos tus muebles con artesanía experta, materiales premium y acabados perfectos. Más de 15 años de excelencia en tapicería.
             </p>
             
             <div class="contact-highlight">
-                <p><i class="fas fa-phone-alt"></i> <strong>Contacto Directo:</strong> 321 150 8668</p>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Especialistas en:</strong> Tapicería fina, restauración y diseño interior</p>
-                <p><i class="fas fa-star"></i> <strong>Compromiso:</strong> Calidad garantizada y atención personalizada</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> La Loma de Bolívar, Cúcuta, Norte de Santander</p>
+                <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 321 150 8668</p>
+                <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Sábado 8:00 AM - 6:00 PM</p>
+                <p><i class="fas fa-star"></i> <strong>Especialidad:</strong> Tapicería fina, restauración y diseño de muebles</p>
             </div>
             
             <div>
-                <a href="tel:3211508668" class="btn btn-gold">
+                <a href="tel:3211508668" class="btn btn-primary">
                     <i class="fas fa-phone-alt"></i> LLAMAR AHORA
                 </a>
-                <a href="https://wa.me/573211508668" target="_blank" class="btn btn-outline">
+                <a href="https://wa.me/573211508668" target="_blank" class="btn btn-accent">
                     <i class="fab fa-whatsapp"></i> WHATSAPP
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Valores QUERELLE -->
+    <!-- Misión -->
+    <section class="section" id="mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Misión</h2>
+                <p>Nuestro compromiso con la excelencia</p>
+            </div>
+            
+            <div class="mv-card">
+                <div class="mv-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Misión de MUEBLES RQ</h3>
+                <p>Ofrecer servicios de tapicería y restauración de muebles con los más altos estándares de calidad, utilizando materiales premium y técnicas artesanales que garantizan durabilidad, confort y elegancia para cada espacio en la comunidad de Cúcuta y Norte de Santander.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visión -->
+    <section class="section" id="vision">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visión</h2>
+                <p>Nuestra proyección a futuro</p>
+            </div>
+            
+            <div class="mv-card">
+                <div class="mv-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Visión de MUEBLES RQ</h3>
+                <p>Ser el taller de tapicería referente en Cúcuta y la región, reconocido por nuestra excelencia en acabados, atención personalizada y compromiso con la satisfacción total de nuestros clientes, promoviendo la conservación de muebles con valor sentimental e histórico.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
     <section class="section" id="values">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Valores</h2>
-                <p>Los principios que definen la excelencia de QUERELLE</p>
+                <h2>Valores</h2>
+                <p>Los principios que nos guían</p>
             </div>
             
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
                         <i class="fas fa-gem"></i>
                     </div>
                     <h3>Calidad Suprema</h3>
                     <p>Trabajamos exclusivamente con materiales premium: telas de alta resistencia, cueros genuinos, espumas de densidad óptima y acabados que perduran en el tiempo.</p>
                 </div>
                 
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Diseño Personalizado</h3>
-                    <p>Cada proyecto es único. Creamos soluciones a medida que armonizan con tu estilo, espacio y necesidades específicas, convirtiendo muebles en piezas de arte.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
+                <div class="mv-card">
+                    <div class="mv-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3>Artesanía Experta</h3>
                     <p>Nuestro equipo de maestros tapiceros combina técnicas tradicionales con innovación moderna, garantizando perfección en cada costura y detalle.</p>
                 </div>
                 
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Puntualidad Garantizada</h3>
-                    <p>Respetamos tus tiempos. Entregamos cada trabajo en el plazo acordado sin comprometer la calidad que nos caracteriza.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Sostenibilidad</h3>
-                    <p>Promovemos la restauración sobre el reemplazo, dando nueva vida a muebles con historia y reduciendo el impacto ambiental.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
+                <div class="mv-card">
+                    <div class="mv-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Pasión por lo que Hacemos</h3>
@@ -782,8 +763,8 @@
     <section class="section" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Servicios Premium</h2>
-                <p>Soluciones integrales para espacios excepcionales</p>
+                <h2>Servicios</h2>
+                <p>Soluciones integrales para tus muebles</p>
             </div>
             
             <div class="services-grid">
@@ -792,42 +773,9 @@
                         <i class="fas fa-couch"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Tapicería de Lujo</h3>
-                        <p>Renovación completa de sofás, chaise longues, butacas y módulares con telas importadas, cueros premium y detalles artesanales.</p>
-                        <div class="service-price">Desde $450.000</div>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-chair"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Restauración de Antigüedades</h3>
-                        <p>Recuperación especializada de muebles con valor histórico o sentimental, conservando su esencia mientras le damos nueva vida.</p>
-                        <div class="service-price">Desde $350.000</div>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Cabeceras Personalizadas</h3>
-                        <p>Diseño y fabricación de cabeceras de cama a medida con telas especiales, botonados franceses y detalles de alta costura.</p>
-                        <div class="service-price">Desde $280.000</div>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Decoración de Interiores</h3>
-                        <p>Asesoría completa en combinación de colores, telas, texturas y estilos para crear espacios armónicos y sofisticados.</p>
-                        <div class="service-price">Consultar</div>
+                        <h3>Tapicería Completa</h3>
+                        <p>Renovación total de sofás, sillas, butacas y cabeceras con telas de alta calidad y acabados profesionales.</p>
+                        <div class="service-price">Desde $300.000</div>
                     </div>
                 </div>
                 
@@ -836,66 +784,66 @@
                         <i class="fas fa-tools"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Reparación Especializada</h3>
-                        <p>Solución de problemas estructurales, cambio de muelles, espumas y recuperación de marcos dañados.</p>
-                        <div class="service-price">Desde $180.000</div>
+                        <h3>Restauración de Muebles</h3>
+                        <p>Recuperación de muebles antiguos, cambio de espumas, reparación de estructuras y acabados especiales.</p>
+                        <div class="service-price">Desde $250.000</div>
                     </div>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-img">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-paint-roller"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Servicio a Domicilio</h3>
-                        <p>Recogida, transporte y entrega segura de tus muebles. Presupuesto en sitio sin costo adicional.</p>
-                        <div class="service-price">Incluido*</div>
+                        <h3>Cambio de Telas</h3>
+                        <p>Actualización de tapicería con nuevas telas, cueros sintéticos y materiales especiales a tu elección.</p>
+                        <div class="service-price">Desde $180.000</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto Elegante -->
+    <!-- Contacto -->
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contacto Exclusivo</h2>
-                <p>Transformemos tus ideas en realidad</p>
+                <h2>Contacto</h2>
+                <p>Cotiza tu proyecto sin compromiso</p>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>QUERELLE</h3>
-                    <p style="color: var(--beige); margin-bottom: 2rem; font-size: 1.2rem;">
-                        Tapicería y Decoración de Interiores
+                    <h3>MUEBLES RQ</h3>
+                    <p style="color: var(--gold); margin-bottom: 2rem; font-size: 1.2rem;">
+                        Tapicería de Máximo Nivel - La Loma de Bolívar, Cúcuta
                     </p>
                     
                     <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> La Loma de Bolívar, Cúcuta, N. de Santander</p>
                         <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 321 150 8668</p>
-                        <p><i class="fas fa-comments"></i> <strong>WhatsApp:</strong> 321 150 8668</p>
-                        <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Sábado 9:00 - 19:00</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> contacto@querelle.com</p>
-                        <p><i class="fas fa-award"></i> <strong>Especialidad:</strong> Tapicería fina y diseño interior</p>
+                        <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Sábado: 8:00 AM - 6:00 PM</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@mueblesrq.com</p>
+                        <p><i class="fas fa-award"></i> <strong>Especialidad:</strong> Tapicería fina y restauración</p>
                     </div>
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                        <a href="tel:3211508668" class="btn btn-gold">
+                        <a href="tel:3211508668" class="btn btn-primary">
                             <i class="fas fa-phone-alt"></i> LLAMAR
                         </a>
-                        <a href="https://wa.me/573211508668" target="_blank" class="btn btn-outline">
+                        <a href="https://wa.me/573211508668" target="_blank" class="btn btn-accent">
                             <i class="fab fa-whatsapp"></i> WHATSAPP
                         </a>
                     </div>
                 </div>
                 
-                <div class="contact-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h4 style="color: var(--gold); margin-bottom: 1rem;">QUERELLE</h4>
-                        <p style="text-align: center; color: var(--beige);">
-                            Tapicería y Decoración de Interiores<br>
-                            Servicio en toda la ciudad
+                <div class="contact-map" style="background-color: #E8E1D5; border-radius: 10px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+                    <div style="width: 100%; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--secondary); padding: 2rem;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 4.5rem; margin-bottom: 1.5rem; color: var(--primary);"></i>
+                        <h4 style="color: var(--dark); margin-bottom: 1rem;">Ubicación MUEBLES RQ</h4>
+                        <p style="text-align: center; color: var(--dark); font-size: 1.1rem;">
+                            La Loma de Bolívar<br>
+                            Cúcuta, Norte de Santander
                         </p>
                     </div>
                 </div>
@@ -903,17 +851,17 @@
         </div>
     </section>
 
-    <!-- Footer Elegante -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>QUERELLE</h3>
-                    <p>Transformamos espacios con elegancia atemporal y artesanía experta. Más de una década creando ambientes que inspiran y perduran.</p>
+                    <h3>MUEBLES <span>RQ</span></h3>
+                    <p>Tapicería de máximo nivel en Cúcita. Transformamos tus espacios con calidad, elegancia y artesanía experta. Más de 15 años de experiencia.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                         <a href="#"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -922,6 +870,8 @@
                     <h4>Menú</h4>
                     <ul>
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#mission"><i class="fas fa-chevron-right"></i> Misión</a></li>
+                        <li><a href="#vision"><i class="fas fa-chevron-right"></i> Visión</a></li>
                         <li><a href="#values"><i class="fas fa-chevron-right"></i> Valores</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Servicios</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contacto</a></li>
@@ -930,24 +880,24 @@
                 
                 <div class="footer-contact">
                     <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> La Loma de Bolívar, Cúcuta</p>
                     <p><i class="fas fa-phone-alt"></i> 321 150 8668</p>
-                    <p><i class="fas fa-clock"></i> Lun-Sáb: 9:00 - 19:00</p>
+                    <p><i class="fas fa-clock"></i> Lun-Sáb: 8:00 AM - 6:00 PM</p>
                     <p><i class="fas fa-star"></i> Tapicería de máximo nivel</p>
-                    <p><i class="fas fa-palette"></i> Decoración de interiores</p>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2024 QUERELLE - Tapicería y Decoración de Interiores. Todos los derechos reservados.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; letter-spacing: 0.5px;">
-                    Diseño elegante para espacios excepcionales | Calidad, arte y sofisticación
+                <p>&copy; 2024 MUEBLES RQ - Tapicería de Máximo Nivel. Todos los derechos reservados.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    La Loma de Bolívar, Cúcuta, Norte de Santander | Calidad, arte y tradición en tapicería
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Menú Hamburguesa Elegante
+        // Menú Hamburguesa
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         
@@ -989,34 +939,11 @@
             const header = document.querySelector('header');
             if(window.scrollY > 100) {
                 header.style.padding = '0.8rem 0';
-                header.style.backgroundColor = 'rgba(26, 18, 11, 0.98)';
+                header.style.backgroundColor = 'rgba(44, 24, 16, 0.98)';
             } else {
                 header.style.padding = '1.2rem 0';
-                header.style.backgroundColor = 'rgba(26, 18, 11, 0.95)';
+                header.style.backgroundColor = 'rgba(44, 24, 16, 0.95)';
             }
-        });
-        
-        // Animación suave para tarjetas al hacer scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observar tarjetas para animación
-        document.querySelectorAll('.value-card, .service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
         });
     </script>
 </body>
