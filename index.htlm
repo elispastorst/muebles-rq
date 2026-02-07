@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUERELLE - Tapicería y Decoración de Interiores | Calidad y Elegancia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C5A572;
+            --beige: #F5F1E8;
+            --brown: #3E2723;
+            --light-brown: #8D6E63;
+            --cream: #FFFBF0;
+            --dark: #1A120B;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.7;
+            color: var(--brown);
+            background-color: var(--cream);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Elegante */
+        header {
+            background-color: rgba(26, 18, 11, 0.95);
+            color: white;
+            padding: 1.2rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197, 165, 114, 0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo h1 {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 0;
+            letter-spacing: 2px;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.9rem;
+            color: var(--beige);
+            margin-left: 10px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+        
+        /* Menú Hamburguesa Mejorado */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+        
+        .main-nav {
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--beige);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section de Lujo */
+        .hero {
+            background: linear-gradient(rgba(26, 18, 11, 0.85), rgba(26, 18, 11, 0.9)), 
+                        url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 12rem 0 8rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--beige);
+            font-weight: 300;
+        }
+        
+        .divider {
+            width: 100px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: 2rem auto;
+        }
+        
+        .contact-highlight {
+            background-color: rgba(197, 165, 114, 0.15);
+            border-left: 4px solid var(--gold);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: left;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .contact-highlight p {
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-highlight i {
+            color: var(--gold);
+            margin-right: 15px;
+            width: 25px;
+            text-align: center;
+        }
+        
+        /* Botones Elegantes */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+            gap: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(197, 165, 114, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(197, 165, 114, 0.3);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: 2px solid #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: transparent;
+            color: #25D366;
+            transform: translateY(-3px);
+        }
+        
+        /* Secciones */
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+            color: var(--brown);
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .section-title p {
+            font-size: 1.3rem;
+            color: var(--light-brown);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-style: italic;
+        }
+        
+        /* Valores QUERELLE */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .value-card {
+            background-color: white;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease;
+            border-top: 5px solid var(--gold);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        .value-icon {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+        
+        .value-card h3 {
+            color: var(--brown);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .value-card p {
+            color: var(--light-brown);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-img {
+            height: 250px;
+            background-color: var(--beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .service-img i {
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+        
+        .service-content {
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .service-content h3 {
+            color: var(--brown);
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .service-price {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Contacto */
+        .contact-section {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .contact-section .section-title h2 {
+            color: var(--gold);
+        }
+        
+        .contact-section .section-title p {
+            color: var(--beige);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-info h3 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(197, 165, 114, 0.2);
+        }
+        
+        .contact-details p {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .contact-details i {
+            color: var(--gold);
+            margin-right: 15px;
+            width: 25px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-map {
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(197, 165, 114, 0.2);
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            padding: 2rem;
+        }
+        
+        .map-placeholder i {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Footer Elegante */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 5rem 0 3rem;
+            border-top: 1px solid rgba(197, 165, 114, 0.3);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .footer-logo h3 {
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .footer-logo p {
+            color: #BBBBBB;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            color: var(--gold);
+            margin-bottom: 1.8rem;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul li a {
+            color: #BBBBBB;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 1.2rem;
+            color: #BBBBBB;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+        }
+        
+        .footer-contact i {
+            color: var(--gold);
+            width: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(197, 165, 114, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(197, 165, 114, 0.3);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(197, 165, 114, 0.3);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888888;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .main-nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--dark);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                transition: right 0.4s ease;
+                z-index: 1000;
+                border-left: 1px solid rgba(197, 165, 114, 0.3);
+            }
+            
+            .main-nav.active {
+                right: 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                margin: 1.2rem 0;
+            }
+            
+            .hero {
+                padding: 10rem 0 6rem;
+                margin-top: 70px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .contact-highlight {
+                padding: 1.5rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .value-card {
+                padding: 2.5rem 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .btn {
+                padding: 0.9rem 2rem;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Elegante -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <h1>QUERELLE</h1>
+                <div class="logo-subtitle">Tapicería & Decoración</div>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#values">Valores</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section Elegante -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>QUERELLE</h2>
+            <div class="hero-subtitle">Tapicería y Decoración de Interiores</div>
+            <div class="divider"></div>
+            <p style="font-size: 1.3rem; color: var(--beige); margin-bottom: 2rem;">
+                Elegancia atemporal en cada detalle. Transformamos espacios con artesanía experta y materiales de primera calidad.
+            </p>
+            
+            <div class="contact-highlight">
+                <p><i class="fas fa-phone-alt"></i> <strong>Contacto Directo:</strong> 321 150 8668</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Especialistas en:</strong> Tapicería fina, restauración y diseño interior</p>
+                <p><i class="fas fa-star"></i> <strong>Compromiso:</strong> Calidad garantizada y atención personalizada</p>
+            </div>
+            
+            <div>
+                <a href="tel:3211508668" class="btn btn-gold">
+                    <i class="fas fa-phone-alt"></i> LLAMAR AHORA
+                </a>
+                <a href="https://wa.me/573211508668" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-whatsapp"></i> WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores QUERELLE -->
+    <section class="section" id="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Valores</h2>
+                <p>Los principios que definen la excelencia de QUERELLE</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Calidad Suprema</h3>
+                    <p>Trabajamos exclusivamente con materiales premium: telas de alta resistencia, cueros genuinos, espumas de densidad óptima y acabados que perduran en el tiempo.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseño Personalizado</h3>
+                    <p>Cada proyecto es único. Creamos soluciones a medida que armonizan con tu estilo, espacio y necesidades específicas, convirtiendo muebles en piezas de arte.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Artesanía Experta</h3>
+                    <p>Nuestro equipo de maestros tapiceros combina técnicas tradicionales con innovación moderna, garantizando perfección en cada costura y detalle.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Puntualidad Garantizada</h3>
+                    <p>Respetamos tus tiempos. Entregamos cada trabajo en el plazo acordado sin comprometer la calidad que nos caracteriza.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sostenibilidad</h3>
+                    <p>Promovemos la restauración sobre el reemplazo, dando nueva vida a muebles con historia y reduciendo el impacto ambiental.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Pasión por lo que Hacemos</h3>
+                    <p>Amamos transformar espacios. Nuestra dedicación se refleja en cada proyecto, desde el diseño hasta el último detalle de instalación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Servicios Premium</h2>
+                <p>Soluciones integrales para espacios excepcionales</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tapicería de Lujo</h3>
+                        <p>Renovación completa de sofás, chaise longues, butacas y módulares con telas importadas, cueros premium y detalles artesanales.</p>
+                        <div class="service-price">Desde $450.000</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Restauración de Antigüedades</h3>
+                        <p>Recuperación especializada de muebles con valor histórico o sentimental, conservando su esencia mientras le damos nueva vida.</p>
+                        <div class="service-price">Desde $350.000</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cabeceras Personalizadas</h3>
+                        <p>Diseño y fabricación de cabeceras de cama a medida con telas especiales, botonados franceses y detalles de alta costura.</p>
+                        <div class="service-price">Desde $280.000</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Decoración de Interiores</h3>
+                        <p>Asesoría completa en combinación de colores, telas, texturas y estilos para crear espacios armónicos y sofisticados.</p>
+                        <div class="service-price">Consultar</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Reparación Especializada</h3>
+                        <p>Solución de problemas estructurales, cambio de muelles, espumas y recuperación de marcos dañados.</p>
+                        <div class="service-price">Desde $180.000</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Servicio a Domicilio</h3>
+                        <p>Recogida, transporte y entrega segura de tus muebles. Presupuesto en sitio sin costo adicional.</p>
+                        <div class="service-price">Incluido*</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Elegante -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto Exclusivo</h2>
+                <p>Transformemos tus ideas en realidad</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>QUERELLE</h3>
+                    <p style="color: var(--beige); margin-bottom: 2rem; font-size: 1.2rem;">
+                        Tapicería y Decoración de Interiores
+                    </p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 321 150 8668</p>
+                        <p><i class="fas fa-comments"></i> <strong>WhatsApp:</strong> 321 150 8668</p>
+                        <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Sábado 9:00 - 19:00</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> contacto@querelle.com</p>
+                        <p><i class="fas fa-award"></i> <strong>Especialidad:</strong> Tapicería fina y diseño interior</p>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <a href="tel:3211508668" class="btn btn-gold">
+                            <i class="fas fa-phone-alt"></i> LLAMAR
+                        </a>
+                        <a href="https://wa.me/573214508668" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-whatsapp"></i> WHATSAPP
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4 style="color: var(--gold); margin-bottom: 1rem;">QUERELLE</h4>
+                        <p style="text-align: center; color: var(--beige);">
+                            Tapicería y Decoración de Interiores<br>
+                            Servicio en toda la ciudad
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Elegante -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>QUERELLE</h3>
+                    <p>Transformamos espacios con elegancia atemporal y artesanía experta. Más de una década creando ambientes que inspiran y perduran.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Menú</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#values"><i class="fas fa-chevron-right"></i> Valores</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone-alt"></i> 321 150 8668</p>
+                    <p><i class="fas fa-clock"></i> Lun-Sáb: 9:00 - 19:00</p>
+                    <p><i class="fas fa-star"></i> Tapicería de máximo nivel</p>
+                    <p><i class="fas fa-palette"></i> Decoración de interiores</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 QUERELLE - Tapicería y Decoración de Interiores. Todos los derechos reservados.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; letter-spacing: 0.5px;">
+                    Diseño elegante para espacios excepcionales | Calidad, arte y sofisticación
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú Hamburguesa Elegante
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Cerrar menú al hacer clic en enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Efecto de scroll en header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.padding = '0.8rem 0';
+                header.style.backgroundColor = 'rgba(26, 18, 11, 0.98)';
+            } else {
+                header.style.padding = '1.2rem 0';
+                header.style.backgroundColor = 'rgba(26, 18, 11, 0.95)';
+            }
+        });
+        
+        // Animación suave para tarjetas al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observar tarjetas para animación
+        document.querySelectorAll('.value-card, .service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
